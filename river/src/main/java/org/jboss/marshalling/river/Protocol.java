@@ -20,6 +20,7 @@ package org.jboss.marshalling.river;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  *
@@ -194,12 +195,21 @@ public final class Protocol {
     static final Class<?> emptyMapClass = Collections.emptyMap().getClass();
 
     static final Class<?> reverseOrderClass = Collections.reverseOrder().getClass();
-    static final Class<?> reverseOrder2Class = Collections.reverseOrder(Collections.<Object>reverseOrder()).getClass();
+    static final Class<?> reverseOrder2Class = Collections.reverseOrder(new TrivialComparator()).getClass();
     static final Field reverseOrder2Field;
 
     static final Class<?> nCopiesClass = Collections.nCopies(1, null).getClass();
 
     static final Class<?> enumSetProxyClass;
+
+    static class TrivialComparator implements Comparator<Object> {
+        TrivialComparator() {
+        }
+
+        public int compare(final Object o1, final Object o2) {
+            return 0;
+        }
+    }
 
     static {
         Class<?> clazz;
