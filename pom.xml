@@ -25,7 +25,7 @@
     <groupId>org.jboss.marshalling</groupId>
     <artifactId>jboss-marshalling-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.12.SEE1</version>
+    <version>1.4.12.SEE2-SNAPSHOT</version>
 
     <parent>
         <groupId>org.jboss</groupId>
@@ -37,7 +37,7 @@
         <connection>scm:git:git://github.com/seeburger-ag/jboss-marshalling.git</connection>
         <developerConnection>scm:git:git@github.com:seeburger-ag/jboss-marshalling.git</developerConnection>
         <url>https://github.com/seeburger-ag/jboss-marshalling</url>
-      <tag>jboss-marshalling-parent-1.4.12.SEE1</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <properties>
